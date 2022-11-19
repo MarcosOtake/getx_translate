@@ -3,7 +3,12 @@ import 'package:get/get.dart';
 import 'package:getx_translate/core/translation/translation_keys.dart';
 import 'package:getx_translate/pages/home_page.dart';
 
-void main() {
+late TranslationKeys translationKeys;
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  translationKeys = TranslationKeys();
+  await translationKeys.load();
   runApp(const MyApp());
 }
 
@@ -13,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      translations: TranslationKeys(),
+      translations: translationKeys,
       locale: const Locale('pt', 'BR'),
       //locale: const Locale('en', 'US'),
       //locale: const Locale('jp', 'JP'),

@@ -1,0 +1,8 @@
+{
+    "title_app": "GetX Hon'yaku 翻訳",
+    "welcome": "こんにちは Kon'nichiwa @name",
+    "sigle_user": "ユーザー Yūzā",
+    "plural_users": "ユーザー Yūzā(s)",
+    "example_single": " @qtd ユーザー Yūzā",
+    "example_plural": " @qtd ユーザー Yūzā(s)"
+}
